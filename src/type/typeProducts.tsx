@@ -1,4 +1,4 @@
-export type Products={
-    name:String,
-    age: number
+export type TypeProducts={
+    name:string,
+    price:number
 };

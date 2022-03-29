@@ -13,7 +13,7 @@ const Website = (props: Props) => {
                         </a>
 
                         <ul className="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                            <li><NavLink to="/" className="nav-link px-2 text-white">Home</NavLink></li>
+                            <li><NavLink to="/home" className="nav-link px-2 text-white">Home</NavLink></li>
                             <li><NavLink to="/products" className="nav-link px-2 text-white">Prodcuts</NavLink></li>                          
                             <li><NavLink to="/about" className="nav-link px-2 text-white">About</NavLink></li> 
                             <li><NavLink to="/blog" className="nav-link px-2 text-white">Blog</NavLink></li> 
@@ -25,7 +25,7 @@ const Website = (props: Props) => {
                         </form>
 
                         <div className="text-end">
-                            <a href="/admin"><button type="button" className="btn btn-outline-light me-2">Login</button></a>
+                            <a href="admin"><button type="button" className="btn btn-outline-light me-2">Login</button></a>
                             <button type="button" className="btn btn-warning">Sign-up</button>
                         </div>
                     </div>

@@ -15,14 +15,16 @@ import AddProducts from './pages/layout/AddProducts';
 function App() {
 
   const [Products, setProducts] = useState<TypeProducts[]>([]);
+ 
+  
   useEffect(() => {
     const getProducts = async () => {
       const { data } = await getAll();
-      // setProducts(data);
+      setProducts(data);
     }
     getProducts();
   })
-  const onHandleAdd = async (products: any) =>{
+  const onHandleAdd = async (products: TypeProducts) =>{
     console.log("app.js", products);
     // api axios
     const {data} = await add(products)
@@ -53,7 +55,7 @@ function App() {
           <Route path='/admin' element={<Admin />} >
 
             <Route index element={<Navigate to="dashboard" />}/>
-            <Route path="dashboard" element={<Dashboard Productss={Products}/>} />
+            <Route path="dashboard" element={<Dashboard products={Products}/>} />
             <Route path="products" element={<AddProducts onAdd={onHandleAdd}/>} />
 
           </Route>

@@ -1,12 +1,10 @@
 import React from 'react'
 import { Outlet } from 'react-router-dom'
-import { TypeProducts } from '../../type/typeProducts'
 
-type ListProductsProps = {
-  Productss: TypeProducts[]
-}
 
-const Admin = (props: ListProductsProps) => {
+const AdminProps ={}
+
+const Admin= (props:AdminProps) => {
   return (
     <div>
       <header className="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
@@ -115,28 +113,6 @@ const Admin = (props: ListProductsProps) => {
           </div>
 
           <Outlet />
-          <table className="table">
-            <thead>
-              <tr>
-                <th scope="col">#</th>
-                <th scope="col">First</th>
-                <th scope="col">Last</th>
-                <th scope="col">Handle</th>
-              </tr>
-            </thead>
-            <tbody>
-              {props.Productss.map((item, index) =>{
-                return <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-              </tr>
-              })}
-              
-              
-            </tbody>
-          </table>
         </main>
       </div>
     </div>
